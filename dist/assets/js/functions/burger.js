@@ -1,6 +1,6 @@
 ;(function burgerMenu() {
   const burger = document.querySelector('.burger')
-  const navigation = document.querySelector('.header__navigation')
+  const navigation = document.querySelector('.header__nav')
   const overlay = document.querySelector('.overlay')
 
   burger.addEventListener('click', () => {

@@ -409,6 +409,7 @@ body {
     font-family: "Golos Text", sans-serif;
     font-weight: 500;
     font-size: 15px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .wrapper {
@@ -667,6 +668,12 @@ body {
     border-radius: 2px;
 }
 
+@media screen and (max-width: 992px) {
+    .dropdown {
+        transition: opacity 0s;
+    }
+}
+
 @media (any-hover: hover) {
     .dropdown:hover {
         color: #222;
@@ -677,6 +684,23 @@ body {
 .dropdown.active {
     color: #222;
     opacity: 1;
+}
+
+.dropdown.active svg {
+    transform: rotate(-90deg);
+}
+
+.dropdown.active .sub-menu {
+    opacity: 1;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    user-select: auto;
+    transform: scale(1);
+    visibility: visible;
+}
+
+.dropdown svg {
+    transition: transform 150ms linear;
 }
 
 .selected {
@@ -699,35 +723,25 @@ body {
     user-select: none;
     visibility: hidden;
     transition: 0.2s ease-in-out all;
+    background-color: #fff;
     border-radius: 3px;
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
-.sub-menu__item > a {
+.sub-menu a {
     display: block;
     padding: 5px;
 }
 
-.sub-menu__item a:hover {
+@media (any-hover: hover) {
+    .sub-menu a:hover {
+        background: linear-gradient(to right, #5e8baf, #17687c);
+        color: #fff;
+    }
+}
+
+.sub-menu a:active {
     background: linear-gradient(to right, #5e8baf, #17687c);
-    color: #fff;
-}
-
-.dropdown svg {
-    transition: transform 150ms linear;
-}
-
-.dropdown.active svg {
-    transform: rotate(-90deg);
-}
-
-.dropdown.active > .sub-menu {
-    opacity: 1;
-    -webkit-user-select: auto;
-    -moz-user-select: auto;
-    user-select: auto;
-    transform: scale(1);
-    visibility: visible;
 }
 
 .overlay {
@@ -760,7 +774,7 @@ body {
     background-color: transparent;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .burger {
         display: flex;
     }
@@ -773,7 +787,7 @@ body {
 
 .burger.active span::before, .burger.active span::after {
     transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
 }
 
 .burger.active span::before {
@@ -795,7 +809,7 @@ body {
     width: 26px;
     transform-origin: 50% 50%;
     transition: 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-    background-color: rgb(255, 255, 255);
+    background-color: #222;
 }
 
 .burger span::before, .burger span::after {
@@ -803,7 +817,7 @@ body {
     position: absolute;
     height: 2px;
     width: 26px;
-    background-color: rgb(255, 255, 255);
+    background-color: #222;
     transform-origin: 50% 50%;
     transition: 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
 }
@@ -820,10 +834,43 @@ body {
     padding: 20px 0;
 }
 
+@media screen and (max-width: 768px) {
+    .header__logo {
+        width: 150px;
+    }
+}
+
 .header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.nav.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 992px) {
+    .nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 10;
+        flex-direction: column;
+        min-height: 100%;
+        width: 250px;
+        padding: 100px 0;
+        transform: translateX(400px);
+        transition: opacity 0.6s, transform 0.3s;
+        opacity: 0;
+        border-radius: 5px 0 0 5px;
+        background: rgba(255, 255, 255, 0.67);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: -6px 0px 24px -1px rgba(44, 51, 56, 0.15);
+    }
 }
 
 .nav__list {
@@ -832,9 +879,17 @@ body {
     gap: 61px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+    .nav__list {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
     .nav__list {
         flex-direction: column;
+        align-items: flex-start;
+        padding-left: 80px;
         gap: 20px;
     }
 }
