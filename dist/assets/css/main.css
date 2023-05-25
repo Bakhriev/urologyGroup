@@ -1139,7 +1139,7 @@ body {
         position: relative;
         inset: auto;
         max-width: 100%;
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -1147,9 +1147,14 @@ body {
     transform: translateY(100px);
 }
 
+@media screen and (max-width: 768px) {
+    .hero__offer {
+        transform: translateY(50px);
+    }
+}
+
 .offer {
     display: flex;
-    display: none;
     width: 100%;
     gap: 138px;
     padding: 41px 90px 46px 50px;
@@ -1160,11 +1165,51 @@ body {
     border-radius: 30px;
 }
 
+@media screen and (max-width: 1200px) {
+    .offer {
+        padding: 31px 80px 40px 45px;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .offer {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .offer {
+        padding: 20px 30px;
+        gap: 20px;
+    }
+}
+
 .offer__title {
     max-width: 172px;
     font-weight: 700;
     font-size: 40px;
     color: #8095f2;
+}
+
+@media screen and (max-width: 1200px) {
+    .offer__title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .offer__title {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .offer__title {
+        font-size: 25px;
+    }
 }
 
 .offer__list-wrapper {
@@ -1173,10 +1218,41 @@ body {
     width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+    .offer__list-wrapper {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .offer__list-wrapper {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
 .offer__list {
     display: flex;
     flex-direction: column;
     gap: 14px;
+}
+
+@media screen and (max-width: 475px) {
+    .offer__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+        padding-bottom: 20px;
+    }
+
+    .offer__list:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
 }
 
 .offer__list-item {
@@ -1195,11 +1271,23 @@ body {
     background-color: #00a7b5;
 }
 
+@media screen and (max-width: 475px) {
+    .offer__list-item::before {
+        left: -12px;
+    }
+}
+
 .offer__list-item-link {
     font-weight: 500;
     font-size: 20px;
     color: #181a36;
     transition: color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .offer__list-item-link {
+        font-size: 16px;
+    }
 }
 
 @media (any-hover: hover) {
