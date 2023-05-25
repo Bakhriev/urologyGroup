@@ -38,6 +38,9 @@ body {
 }
 
 .btn {
+  user-select: none;
+  display: inline-block;
+  cursor: pointer;
   padding: 16px 30px;
   background-color: $green;
   color: #fff;
