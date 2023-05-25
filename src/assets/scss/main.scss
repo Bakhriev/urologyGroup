@@ -32,6 +32,11 @@
 // Layouts
 @import './layout/header';
 @import './layout/footer';
+@import './layout/hero';
 
 // Pages
 @import './pages/home';
+
+body {
+  background-color: #fff;
+}
