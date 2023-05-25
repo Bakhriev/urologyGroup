@@ -140,6 +140,83 @@
       transform: translateY(50px);
     }
   }
+
+  // Icons
+  &__circle-icon {
+    position: absolute;
+    z-index: 2;
+    right: -52px;
+    top: -20px;
+    animation: circleAnimate 12s ease-in-out infinite both;
+  }
+  &__lung-icon {
+    position: absolute;
+    z-index: 2;
+    left: 405px;
+    bottom: 205px;
+    animation: lungAnimate 3s ease-in-out infinite;
+  }
+  &__urea-icon {
+    position: absolute;
+    z-index: 2;
+    right: 608px;
+    top: -75px;
+    animation: ureaAnimate 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+  .icon-hover {
+    cursor: pointer;
+    transition: fill 0.3s ease-in-out, scale 0.3s ease-in-out;
+    @include hover {
+      fill: $green;
+      stroke: #fff;
+      scale: 1.2;
+    }
+  }
+
+  // Points
+  .point-icon {
+    position: absolute;
+    transition: scale 0.3s ease-in-out;
+    @include hover {
+      scale: 1.2;
+    }
+  }
+  &__point-icon-1 {
+    top: 235px;
+    left: -176px;
+  }
+  &__point-icon-2 {
+    top: 80px;
+    left: -115px;
+  }
+  &__point-icon-3 {
+    top: 400px;
+    left: -95px;
+  }
+  &__point-icon-4 {
+    top: -48px;
+    left: 490px;
+    scale: 0.7;
+  }
+  &__point-icon-5 {
+    right: 24px;
+    top: -90px;
+  }
+  &__point-icon-6 {
+    right: -215px;
+    scale: 0.6;
+    top: 5px;
+  }
+  &__point-icon-7 {
+    right: -123px;
+    top: 215px;
+  }
+  &__point-icon-8 {
+    bottom: 78px;
+    scale: 1.4;
+    right: -125px;
+  }
 }
 
 .offer {
@@ -251,5 +328,50 @@
     @include hover {
       color: $green;
     }
+  }
+}
+
+@keyframes ureaAnimate {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 50px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes lungAnimate {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes circleAnimate {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, 50px);
+  }
+  50% {
+    transform: translate(-20px, 30px);
+  }
+  75% {
+    transform: translate(50px, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
