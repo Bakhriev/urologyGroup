@@ -1,0 +1,26 @@
+// prettier.config.js or .prettierrc.js
+module.exports = {
+  trailingComma: 'es5',
+  tabWidth: 2,
+  semi: false,
+  singleQuote: true,
+  arrowParens: 'avoid',
+  htmlVoidTags: [
+    'area',
+    'base',
+    'br',
+    'col',
+    'embed',
+    'hr',
+    'img',
+    'input',
+    'link',
+    'meta',
+    'param',
+    'source',
+    'track',
+    'wbr',
+    'link',
+    'meta',
+  ],
+}
