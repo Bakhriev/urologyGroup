@@ -1,25 +1,114 @@
 <header class="header">
-  <div class="container header__container flex-center">
-    <a href="#" class="header__logo"><img src="" alt="logo" /></a>
-    <div class="header__navigation flex-center">
-      <nav class="nav">
-        <ul class="nav__list flex-center">
-          <li class="nav__list-item">
-            <a href="#" class="nav__list-item-link">Home</a>
-          </li>
-          <li class="nav__list-item">
-            <a href="#" class="nav__list-item-link">About</a>
-          </li>
-          <li class="nav__list-item">
-            <a href="#" class="nav__list-item-link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__buttons flex-center">
-        <button class="btn header__btn">Login</button>
-        <button class="btn header__btn">Sign Up</button>
-      </div>
-    </div>
+  <div class="container header__container">
+    <a href="#" class="header__logo"
+      ><img src="./assets/img/icons/logo.svg" alt="logo"
+    /></a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li>
+          <a href="#" class="nav__link active">Home</a>
+        </li>
+        <!-- Dropdown -->
+        <li>
+          <button class="dropdown" data-dropdown>
+            <div class="selected">About Us</div>
+            <svg
+              width="10"
+              height="6"
+              viewBox="0 0 10 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.3"
+                d="M1 1.3999L5 4.5999L9 1.3999"
+                stroke="#181A36"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+            </svg>
+
+            <ul class="sub-menu">
+              <li class="sub-menu__item"><a href="#">Apple</a></li>
+              <li class="sub-menu__item"><a href="#">Apple</a></li>
+              <li class="sub-menu__item"><a href="#">Apple</a></li>
+            </ul>
+          </button>
+        </li>
+
+        <!-- Dropdown -->
+
+        <li>
+          <a href="#" class="nav__link">Delivery</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li>
+          <button class="dropdown" data-dropdown>
+            <div class="selected">Services</div>
+            <svg
+              width="10"
+              height="6"
+              viewBox="0 0 10 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.3"
+                d="M1 1.3999L5 4.5999L9 1.3999"
+                stroke="#181A36"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+            </svg>
+
+            <ul class="sub-menu">
+              <li class="sub-menu__item"><a href="#">Apple</a></li>
+              <li class="sub-menu__item"><a href="#">Apple</a></li>
+              <li class="sub-menu__item"><a href="#">Apple</a></li>
+            </ul>
+          </button>
+        </li>
+
+        <!-- Dropdown -->
+        <li>
+          <a href="#" class="nav__link">Our Products</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li>
+          <button class="dropdown" data-dropdown>
+            <div class="selected">Resources</div>
+            <svg
+              width="10"
+              height="6"
+              viewBox="0 0 10 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.3"
+                d="M1 1.3999L5 4.5999L9 1.3999"
+                stroke="#181A36"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+            </svg>
+
+            <ul class="sub-menu">
+              <li class="sub-menu__item"><a href="#">Apple</a></li>
+              <li class="sub-menu__item"><a href="#">Apple</a></li>
+              <li class="sub-menu__item"><a href="#">Apple</a></li>
+            </ul>
+          </button>
+        </li>
+
+        <!-- Dropdown -->
+        <li>
+          <a href="#" class="nav__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
     <div class="burger">
       <span></span>
     </div>

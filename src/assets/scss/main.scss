@@ -21,6 +21,9 @@
 @import '../ui/card/card-light/card-light.scss';
 @import '../ui/card/card-neon-stick/card-neon-stick.scss';
 
+// UI / DROPDOWN
+@import '../ui/dropdown/dropdown.scss';
+
 //Components
 @import './components/overlay';
 @import './components/burger';
@@ -32,13 +35,3 @@
 
 // Pages
 @import './pages/home';
-
-body {
-  background-color: gray;
-}
-
-.card {
-  width: 400px;
-  height: 400px;
-  background-color: #222;
-}

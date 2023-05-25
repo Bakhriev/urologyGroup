@@ -3,56 +3,54 @@
   padding: 20px 0;
 
   &__container {
-    @media screen and (max-width: 768px) {
-      justify-content: space-between;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // @media screen and (max-width: 768px) {
+    //   justify-content: space-between;
+    // }
   }
 
-  &__navigation {
-    width: 100%;
+  // &__navigation {
+  //   width: 100%;
 
-    &.active {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  //   &.active {
+  //     opacity: 1;
+  //     transform: translateX(0);
+  //   }
 
-    @media screen and (max-width: 768px) {
-      position: fixed;
-      right: 0;
-      top: 0;
-      z-index: 10;
+  //   @media screen and (max-width: 768px) {
+  //     position: fixed;
+  //     right: 0;
+  //     top: 0;
+  //     z-index: 10;
 
-      flex-direction: column;
+  //     flex-direction: column;
 
-      min-height: 100%;
-      width: 250px;
+  //     min-height: 100%;
+  //     width: 250px;
 
-      padding: 100px 0;
+  //     padding: 100px 0;
 
-      transform: translateX(400px);
-      transition: opacity 0.6s, transform 0.3s;
+  //     transform: translateX(400px);
+  //     transition: opacity 0.6s, transform 0.3s;
 
-      opacity: 0;
-      border-radius: 5px 0 0 5px;
-      background-color: rgba(31, 41, 55, 0.9);
+  //     opacity: 0;
+  //     border-radius: 5px 0 0 5px;
+  //     background-color: rgba(31, 41, 55, 0.9);
 
-      box-shadow: -6px 0px 24px -1px rgba(44, 51, 56, 0.15);
-    }
-  }
-
-  &__buttons {
-    margin-left: auto;
-    gap: 20px;
-
-    @media screen and (max-width: 768px) {
-      margin: 30px 0;
-      flex-direction: column;
-    }
-  }
+  //     box-shadow: -6px 0px 24px -1px rgba(44, 51, 56, 0.15);
+  //   }
+  // }
 }
+
 .nav {
+  // margin-left: 170px;
   &__list {
-    gap: 50px;
+    display: flex;
+    align-items: center;
+    gap: 61px;
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
@@ -60,13 +58,35 @@
     }
   }
 
-  &__list-item-link {
-    color: $dark;
-    // transition: color 0.3s ease-in-out;
+  &__link {
+    opacity: 0.6;
+    display: inline-block;
+    color: $blue;
+    &.active {
+      opacity: 1;
+      position: relative;
+      &::after {
+        bottom: -2px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        background-color: #00a7b5;
+        border-radius: 50%;
+      }
+    }
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
     position: relative;
 
     @include hover {
+      color: $dark;
+      opacity: 1;
       &::after {
         transform: scaleX(1);
         transform-origin: left bottom;
