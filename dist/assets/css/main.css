@@ -1161,12 +1161,47 @@ body {
     animation: circleAnimate 12s ease-in-out infinite both;
 }
 
+@media screen and (max-width: 1200px) {
+    .hero__circle-icon {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero__circle-icon {
+        top: 300px;
+        left: auto;
+        right: 50px;
+        bottom: auto;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .hero__circle-icon {
+        scale: 0.6;
+    }
+}
+
 .hero__lung-icon {
     position: absolute;
     z-index: 2;
     left: 405px;
     bottom: 205px;
     animation: lungAnimate 3s ease-in-out infinite;
+}
+
+@media screen and (max-width: 992px) {
+    .hero__lung-icon {
+        bottom: 400px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .hero__lung-icon {
+        bottom: 450px;
+        scale: 0.6;
+        left: 200px;
+    }
 }
 
 .hero__urea-icon {
@@ -1176,6 +1211,33 @@ body {
     top: -75px;
     animation: ureaAnimate 6s ease-in-out infinite;
     animation-delay: 2s;
+}
+
+@media screen and (max-width: 1200px) {
+    .hero__urea-icon {
+        right: 450px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero__urea-icon {
+        right: 300px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero__urea-icon {
+        top: 300px;
+        right: auto;
+        left: 50px;
+        bottom: auto;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .hero__urea-icon {
+        scale: 0.6;
+    }
 }
 
 .hero .icon-hover {
@@ -1223,9 +1285,21 @@ body {
     scale: 0.7;
 }
 
+@media screen and (max-width: 992px) {
+    .hero__point-icon-4 {
+        display: none;
+    }
+}
+
 .hero__point-icon-5 {
     right: 24px;
     top: -90px;
+}
+
+@media screen and (max-width: 992px) {
+    .hero__point-icon-5 {
+        display: none;
+    }
 }
 
 .hero__point-icon-6 {
