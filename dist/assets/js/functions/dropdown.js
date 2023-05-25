@@ -1,4 +1,4 @@
-export const dropdownInit = () => {
+const dropdownInit = () => {
   document.addEventListener('click', e => {
     let currentDropdown
     if (e.target.closest('[data-dropdown]')) {
