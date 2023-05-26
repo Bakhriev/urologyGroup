@@ -2293,6 +2293,7 @@ body {
 .location__locate {
     position: absolute;
     right: -250px;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2305,11 +2306,9 @@ body {
 
 @media screen and (max-width: 992px) {
     .location__locate {
-        width: 70%;
-    }
-
-    .location__locate img {
         width: 100%;
+        right: auto;
+        margin: 0 auto;
     }
 }
 
@@ -2320,6 +2319,13 @@ body {
     object-fit: cover;
     -o-object-position: 20px;
     object-position: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .location__locate img {
+        -o-object-position: 0;
+        object-position: 0;
+    }
 }
 
 body {
