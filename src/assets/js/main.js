@@ -11,6 +11,15 @@ const dropdownInit = () => {
       dropdown.classList.remove('active')
     })
   })
+  const allDropdowns = document.querySelectorAll('[data-dropdown]')
+  allDropdowns.forEach(d => {
+    d.addEventListener('mouseover', () => {
+      d.classList.add('active')
+    })
+    d.addEventListener('mouseleave', () => {
+      d.classList.remove('active')
+    })
+  })
 }
 
 function burgerMenu() {

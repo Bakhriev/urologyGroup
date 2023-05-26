@@ -9,6 +9,20 @@
     padding-top: 50px;
   }
 
+  &__title {
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 45px;
+    color: #fff;
+    @media screen and (max-width: 1200px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 475px) {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+  }
+
   background-color: $lightBlue;
 
   &__controls {
@@ -162,20 +176,6 @@
   }
   @media screen and (max-width: 475px) {
     gap: 30px;
-  }
-
-  &__title {
-    margin-bottom: 32px;
-    font-weight: 700;
-    font-size: 45px;
-    color: #fff;
-    @media screen and (max-width: 1200px) {
-      font-size: 40px;
-    }
-    @media screen and (max-width: 475px) {
-      margin-bottom: 15px;
-      font-size: 30px;
-    }
   }
 
   &__icon {
