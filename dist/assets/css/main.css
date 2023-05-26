@@ -1946,6 +1946,7 @@ body {
 }
 
 .feedback {
+    position: relative;
     margin-top: 115px;
     padding-top: 110px;
     padding-bottom: 70px;
@@ -2008,6 +2009,12 @@ body {
     overflow: hidden;
 }
 
+@media screen and (max-width: 1200px) {
+    .feedback__swiper-buttons {
+        transform: translate(350px, 45px);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .feedback__swiper-buttons {
         transform: translate(0, 50px);
@@ -2043,6 +2050,103 @@ body {
 
 .feedback__next-btn {
     right: -2px;
+}
+
+.feedback__circle {
+    position: absolute;
+}
+
+.feedback__circle-1 {
+    left: 0;
+    top: 0;
+}
+
+@media screen and (max-width: 475px) {
+    .feedback__circle-1 {
+        width: 100px;
+    }
+}
+
+.feedback__circle-2 {
+    left: -20px;
+    top: 0;
+}
+
+@media screen and (max-width: 475px) {
+    .feedback__circle-2 {
+        width: 100px;
+    }
+}
+
+.feedback__circle-3 {
+    bottom: 0;
+}
+
+@media screen and (max-width: 475px) {
+    .feedback__circle-3 {
+        width: 100px;
+    }
+}
+
+.feedback__circle-4 {
+    top: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 475px) {
+    .feedback__circle-4 {
+        width: 100px;
+    }
+}
+
+.feedback__circle-5 {
+    bottom: -370px;
+    right: 0;
+}
+
+@media screen and (max-width: 475px) {
+    .feedback__circle-5 {
+        width: 100px;
+    }
+}
+
+.feedback__circle-6 {
+    top: 0;
+    right: -50px;
+    width: 700px;
+}
+
+@media screen and (max-width: 992px) {
+    .feedback__circle-6 {
+        width: 400px;
+        right: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedback__circle-6 {
+        display: none;
+    }
+}
+
+.feedback__circle-7 {
+    top: 55px;
+    width: 500px;
+    transform: rotate(45deg);
+    right: 70px;
+}
+
+@media screen and (max-width: 992px) {
+    .feedback__circle-7 {
+        width: 300px;
+        right: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedback__circle-7 {
+        display: none;
+    }
 }
 
 .card {
