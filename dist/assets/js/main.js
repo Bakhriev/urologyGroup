@@ -12,14 +12,17 @@ const dropdownInit = () => {
     })
   })
   const allDropdowns = document.querySelectorAll('[data-dropdown]')
-  allDropdowns.forEach(d => {
-    d.addEventListener('mouseover', () => {
-      d.classList.add('active')
+  if (window.innerWidth > 992) {
+    console.log('yes', window.innerWidth)
+    allDropdowns.forEach(d => {
+      d.addEventListener('mouseover', () => {
+        d.classList.add('active')
+      })
+      d.addEventListener('mouseleave', () => {
+        d.classList.remove('active')
+      })
     })
-    d.addEventListener('mouseleave', () => {
-      d.classList.remove('active')
-    })
-  })
+  }
 }
 
 function burgerMenu() {
