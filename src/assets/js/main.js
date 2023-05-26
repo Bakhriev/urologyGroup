@@ -51,3 +51,12 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.feedback__prev-btn',
   },
 })
+
+const feedbackCurrentSlide = document.querySelector('.feedback__current-slide')
+
+document.querySelector('.feedback__slide-count').textContent =
+  document.querySelectorAll('.swiper-slide').length
+
+swiper.on('slideChange', function () {
+  feedbackCurrentSlide.textContent = swiper.activeIndex + 1
+})
