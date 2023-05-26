@@ -492,14 +492,14 @@ body {
     scale: 0.97;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .epic-btn:hover::after {
         transform: translateY(0);
         border-radius: 0;
     }
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .epic-btn:hover > span:first-child {
         transform: translateY(-40px);
         opacity: 0;
@@ -540,13 +540,13 @@ body {
     transform: translateX(-130px) skewX(-45deg);
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .shiny-btn:hover {
         color: #f2f2f2;
     }
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .shiny-btn:hover::before, .shiny-btn:hover::after {
         opacity: 0.6;
         transform: translateX(320px) skewX(-45deg);
@@ -611,7 +611,7 @@ body {
     position: relative;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .card-light:hover .light-effect {
         opacity: 1;
     }
@@ -664,7 +664,7 @@ body {
     right: 0;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .card-neon-stick:hover::before, .card-neon-stick:hover::after {
         top: 50%;
     }
@@ -693,7 +693,7 @@ body {
     }
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .dropdown:hover {
         color: #222;
         opacity: 1;
@@ -753,7 +753,7 @@ body {
     padding: 5px;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .sub-menu a:hover {
         background: linear-gradient(to right, #5e8baf, #17687c);
         color: #fff;
@@ -949,7 +949,7 @@ body {
     border-radius: 50%;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .nav__link:hover {
         color: #222;
         opacity: 1;
@@ -1076,7 +1076,7 @@ body {
     }
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .footer__list-item-link:hover {
         color: #00a7b5;
     }
@@ -1233,7 +1233,7 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .hero__adress span:hover {
         opacity: 1;
     }
@@ -1243,7 +1243,7 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .hero__btn:hover {
         background-color: #056a74;
     }
@@ -1387,7 +1387,7 @@ body {
     transition: fill 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .hero .icon-hover:hover {
         fill: #00a7b5;
         stroke: #fff;
@@ -1400,7 +1400,7 @@ body {
     transition: scale 0.3s ease-in-out;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .hero .point-icon:hover {
         scale: 1.2;
     }
@@ -1598,7 +1598,7 @@ body {
     }
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .offer__list-item-link:hover {
         color: #00a7b5;
     }
@@ -1855,7 +1855,7 @@ body {
         width: 100%;
         display: grid;
         place-items: center;
-        padding: 10px 25px;
+        padding: 15px 25px;
     }
 }
 
@@ -1916,7 +1916,7 @@ body {
     }
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .services__card:hover .services__card-text {
         background-color: #00a7b5;
         color: #fff;
@@ -2033,7 +2033,7 @@ body {
     border-radius: 50%;
 }
 
-@media (any-hover: hover) {
+@media (any-hover: hover) and (pointer: fine) {
     .feedback__prev-btn:hover, .feedback__next-btn:hover {
         background-color: #222;
     }
