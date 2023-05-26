@@ -47,7 +47,7 @@ const swiper = new Swiper('.swiper', {
   spaceBetween: 100,
   // centeredSlides: true,
   navigation: {
-    nextEl: '.feedback__button-next',
-    prevEl: '.feedback__button-prev',
+    nextEl: '.feedback__next-btn',
+    prevEl: '.feedback__prev-btn',
   },
 })
