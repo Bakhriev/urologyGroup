@@ -41,3 +41,13 @@ function burgerMenu() {
 
 burgerMenu()
 dropdownInit()
+
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  spaceBetween: 100,
+  // centeredSlides: true,
+  navigation: {
+    nextEl: '.feedback__button-next',
+    prevEl: '.feedback__button-prev',
+  },
+})
