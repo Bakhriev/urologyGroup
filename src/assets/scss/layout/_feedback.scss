@@ -23,6 +23,7 @@
     font-weight: 400;
     font-size: 35px;
     color: #fff;
+    width: 140px;
     @media screen and (max-width: 1200px) {
       transform: translate(0, 50px);
     }
@@ -43,7 +44,7 @@
   &__swiper-buttons {
     position: relative;
     z-index: 2;
-    transform: translate(350px, -50px);
+    transform: translate(310px, -50px);
     @media screen and (max-width: 1200px) {
       transform: translate(350px, 45px);
     }

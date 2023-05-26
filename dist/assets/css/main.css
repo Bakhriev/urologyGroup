@@ -1974,6 +1974,7 @@ body {
     font-weight: 400;
     font-size: 35px;
     color: #fff;
+    width: 140px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1999,7 +2000,7 @@ body {
 .feedback__swiper-buttons {
     position: relative;
     z-index: 2;
-    transform: translate(350px, -50px);
+    transform: translate(310px, -50px);
     width: 133px;
     height: 60px;
     background-color: #fff;
