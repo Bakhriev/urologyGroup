@@ -1384,7 +1384,6 @@ body {
 }
 
 .hero .icon-hover {
-    cursor: pointer;
     transition: fill 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
 
