@@ -1,5 +1,5 @@
 // Vendors
-@import './vendors/normalize.scss';
+@import './vendors/normalize.css';
 
 // Base
 @import './base/reset';
@@ -40,7 +40,3 @@
 
 // Pages
 @import './pages/home';
-
-body {
-  background-color: #fff;
-}
