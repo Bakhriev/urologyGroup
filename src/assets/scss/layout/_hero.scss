@@ -338,6 +338,18 @@
   }
 
   &__list-item {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $green;
+    }
     @media screen and (max-width: 475px) {
       &::before {
         left: -12px;

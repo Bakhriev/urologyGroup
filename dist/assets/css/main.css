@@ -1235,6 +1235,22 @@ body {
     }
 }
 
+.offer__list-item {
+    position: relative;
+}
+
+.offer__list-item::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #00a7b5;
+}
+
 @media screen and (max-width: 475px) {
     .offer__list-item::before {
         left: -12px;
