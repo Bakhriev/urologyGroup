@@ -53,6 +53,8 @@ function burgerMenu() {
 burgerMenu()
 dropdownInit()
 
+const feedbackCurrentSlide = document.querySelector('.feedback__current-slide')
+
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 100,
@@ -62,9 +64,6 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.feedback__prev-btn',
   },
 })
-
-const feedbackCurrentSlide = document.querySelector('.feedback__current-slide')
-
 document.querySelector('.feedback__slide-count').textContent =
   document.querySelectorAll('.swiper-slide').length
 
