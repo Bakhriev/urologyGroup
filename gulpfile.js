@@ -131,13 +131,12 @@ function vendors() {
     .pipe(browserSync.reload({ stream: true }))
 }
 
-// function jsVendors() {
-//   return src(path.src.jsVendors)
-//     .pipe(plumber())
-//     .pipe(removeComments())
-//     .pipe(dest(path.build.jsVendors))
-//     .pipe(browserSync.reload({ stream: true }))
-// }
+function jsVendors() {
+  return src(path.src.jsVendors)
+    .pipe(plumber())
+    .pipe(dest(path.build.jsVendors))
+    .pipe(browserSync.reload({ stream: true }))
+}
 
 function js() {
   return src(path.src.js, { base: srcPath + 'assets/js/' })
@@ -213,11 +212,12 @@ function watchFiles() {
   gulp.watch([path.watch.pages], pages)
   gulp.watch([path.watch.fonts], fonts)
   gulp.watch([path.watch.vendors], vendors)
+  gulp.watch([path.watch.jsVendors], jsVendors)
 }
 
 const build = series(
   clean,
-  parallel(html, css, js, images, webpImages, fonts, pages, vendors)
+  parallel(html, css, js, images, webpImages, fonts, pages, vendors, jsVendors)
 )
 const watch = parallel(build, watchFiles, serve)
 
@@ -229,7 +229,7 @@ exports.webpImages = webpImages
 exports.fonts = fonts
 exports.pages = pages
 exports.vendors = vendors
-// exports.jsVendors = jsVendors
+exports.jsVendors = jsVendors
 exports.clean = clean
 exports.build = build
 exports.watch = watch
