@@ -13,7 +13,6 @@ const dropdownInit = () => {
   })
   const allDropdowns = document.querySelectorAll('[data-dropdown]')
   if (window.innerWidth > 992) {
-    console.log('yes', window.innerWidth)
     allDropdowns.forEach(d => {
       d.addEventListener('mouseover', () => {
         d.classList.add('active')
